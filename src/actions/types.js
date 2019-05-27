@@ -1,0 +1,1 @@
+export const GET_BURGER_JOINTS = "GET_BURGER_JOINTS";
