@@ -28,10 +28,6 @@ class MainPage extends Component {
 								{ 
 									Object.entries(this.props.burger_joints).map(key =>
 										<BurgerJoint key={key} burgerInfo={key} /> )
-									
-									/* this.props.burger_joints.map(burger_joints => (
-									<BurgerJoint key={burger_joints.id} burger_joints={burger_joints} />
-									))							 */
 								}
 							</div>
 						</div>
@@ -43,10 +39,9 @@ class MainPage extends Component {
   }
 }
 
-// Dashboard.protoTypes = {
-//   project: PropTypes.object.isRequired,
-//   getProjects: PropTypes.func.isRequired
-// };
+MainPage.protoTypes = {
+	burger_joints: PropTypes.object.isRequired
+};
 
 const mapStateToProps = state => ({
   burger_joints: state.burger_joints
