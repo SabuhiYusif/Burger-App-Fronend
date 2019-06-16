@@ -25,10 +25,10 @@ class MainPage extends Component {
 								<br />
 								<br />
 								<hr />
-								{ 
-									Object.entries(this.props.burger_joints).map(key =>
-										<BurgerJoint key={key} burgerInfo={key} /> )
-								}
+								{this.props.burger_joints.map(info => (
+                <BurgerJoint key={info.id} burgerInfo={info} />
+              ))}
+							
 							</div>
 						</div>
 					</div>

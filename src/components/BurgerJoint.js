@@ -8,9 +8,7 @@ class BurgerJoint extends Component {
 
   render() {
     const burgerInfo  = this.props.burgerInfo;
-    console.log(burgerInfo)
-    const nameAddress = burgerInfo[0].split(",")
-    if(burgerInfo[1] == null){
+    if(burgerInfo.address == null){
       return (
         <div className="container">
           <br />
@@ -18,7 +16,7 @@ class BurgerJoint extends Component {
           <div className="card card-body bg-light mb-3">
             <div className="row">
               <div className="col-2">
-                <span className="mx-auto"><b>Name:</b> {nameAddress[0]}, <b>Address:</b> {nameAddress[1]}</span>
+                <span className="mx-auto"><b>Name:</b> {burgerInfo.name}, <b>Address:</b> {burgerInfo.address}</span>
               </div>
               <div className="col-lg-6 col-md-4 col-8">
               <figcaption>No Burger Photo Found For This Joint</figcaption>
@@ -36,11 +34,11 @@ class BurgerJoint extends Component {
           <div className="card card-body bg-light mb-3">
             <div className="row">
               <div className="col-2">
-                <span className="mx-auto"><b>Name:</b> {nameAddress[0]}, <b>Address:</b> {nameAddress[1]}</span>
+              <span className="mx-auto"><b>Name:</b> {burgerInfo.name}, <b>Address:</b> {burgerInfo.address}</span>
               </div>
               <div className="col-lg-6 col-md-4 col-8">
               <br />
-              <img src={`${burgerInfo[1]}`} width="400" height="400"/>
+              <img src={`${burgerInfo.image}`} width="400" height="400"/>
               </div>
             </div>
           </div>
@@ -50,10 +48,6 @@ class BurgerJoint extends Component {
     
   }
 }
-
-// BurgerJoint.propTypes = {
-//   deleteProject: PropTypes.func.isRequired
-// };
 
 export default connect(
   null,

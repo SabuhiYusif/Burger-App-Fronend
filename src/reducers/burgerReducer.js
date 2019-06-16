@@ -1,7 +1,7 @@
 import {GET_BURGER_JOINTS} from "../actions/types";
 
 const initialState = {
-	burger_joints: {}
+	burger_joints: []
 }
 
 export default function(state = initialState, action){
